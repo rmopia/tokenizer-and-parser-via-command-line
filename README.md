@@ -40,10 +40,6 @@ Next we create a driver program, called "prog2_2.cpp", to utilize the Tokenizer 
 We include the header (.hpp) instead of the actual file (.cpp) so when we can run both files in the terminal there is no repeating methods, resulting in errors.
 The program should take a command line argument and consider it to be a .txt file which will contain the lines of strings that will be read.
 
-Include The assignment project number (X), part (Y), name and email in the format below and ensure it is the first thing outputted when ran.
-
-                Assignment X-Y, <NAME>, <EMAIL>
-
 This file will construct a Tokenizer object if a command line argument in the form a file is found. The command line
 file should be read and then go under the Tokenize function. If a tokenizing error comes up from invalidity, ensure there is appropriate exception handling. After,
 the tokens should be put through the GetTokens method and printed out, line by line, in a way where any white space separating the tokens from the same line are changed
@@ -70,4 +66,18 @@ there should be a second token that must be an integer. As for all the other key
 > "pop","add","skip","sub","mul","div","mod"
 
 the only token present should be one of the keywords on that line. All other inputs are considered invalid.
+
+Part 4
+========
+The final file will be a driver program, called "prog2_4.cpp" that now utilizes the Tokenizer and the Parser classes together. 
+This will also take a file from the command line.
+
+Set up the file to have the Tokenizer construct, Tokenize function and GetTokens function go through prior to the Parser constructor and Parse function. In the case of a
+parsing error from the string input, ensure there is an exception handler that prints out:
+
+                Parse error on line <number>: <value>
+                
+Next, if the Parse function returns valid, print out all the lines of text where any white space found is changed to a comma, similar to Part 2.
+
+Ensure that both the Tokenizer and Parser destructors are called to deallocate any remaining memory.
 
