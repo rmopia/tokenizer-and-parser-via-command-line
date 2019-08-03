@@ -13,7 +13,6 @@ int main(int argc, char *argv[]){   //takes single command line arg i.e. 'test.t
     Tokenizer t;                //calls instance of Tokenizer
     ifstream file(argv[1]);     //opens command-line file
     string content;
-    cout << "Assignment #2-2, Robert Mopia, rmopia7587@sdsu.edu" << endl;
 
     while(getline(file, content)){      //while loop that iterates one string line from file
         t.Tokenize(content);            //calls tokenize method for content      
